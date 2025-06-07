@@ -51,7 +51,7 @@ Make sure the following tools are installed.
 ### 1. Start Minikube
 
 ```bash
-minikube start --driver=docker
+minikube start --cpus=4 --memory 4096 --disk-size 32g
 ```
 
 ### 2. Enable Ingress
