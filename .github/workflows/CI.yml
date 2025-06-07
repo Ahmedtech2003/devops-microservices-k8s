@@ -7,31 +7,31 @@ on:
 
 jobs:
   validate:
-    name: 🔍 Validate Code Quality
+    name: Code Quality Check
     runs-on: ubuntu-latest
 
     steps:
-    - name: 📥 Checkout Repository
+    - name: 📥 Checkout Code
       uses: actions/checkout@v3
 
-    - name: 🐳 Install hadolint (Dockerfile linter)
+    - name: 🐳 Install hadolint
       run: |
         wget -O ~/hadolint https://github.com/hadolint/hadolint/releases/download/v2.12.0/hadolint-Linux-x86_64
         chmod +x ~/hadolint
 
-    - name: 🧼 Lint all Dockerfiles recursively
+    - name: 🔍 Lint Dockerfiles (recursive)
       run: |
-        find . -name 'Dockerfile' -exec hadolint {} \;
+        find . -name 'Dockerfile' -exec ~/hadolint {} \;
 
-    - name: ⎈ Setup Helm
+    - name: ⎈ Install Helm
       uses: azure/setup-helm@v3
       with:
         version: v3.14.0
 
     - name: 🛠️ Lint Helm Chart
-      run: helm lint ./helm-chart
+      run: helm lint helm-chart
 
-    - name: 📄 Lint YAML files
+    - name: 📄 Lint YAML Files
       uses: ibiqlik/action-yamllint@v3
       with:
         file_or_dir: .
