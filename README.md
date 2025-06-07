@@ -108,20 +108,12 @@ minikube delete
 ```
 ## 📸 Screenshots
 
-### Frontend UI
-![App Running](docs/online-boutique-frontend-1.png)
+### Frontend UI  
+![App Running](docs/img/frontend-ui.png)
 
-### Kubernetes Pods
-![kubectl pods](docs/img/Pods and Services.png)
+### Kubernetes Pods  
+![kubectl pods](docs/img/pods-and-services.png)
 
----
-## 📸 Screenshots
-
-### Frontend UI
-![App Running](docs/screenshots/frontend-ui.png)
-
-### Kubernetes Pods
-![kubectl pods](docs/screenshots/kubectl-get-pods.png)
 
 ---
 
