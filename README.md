@@ -106,6 +106,22 @@ helm uninstall online-boutique
 minikube stop
 minikube delete
 ```
+## 📸 Screenshots
+
+### Frontend UI
+![App Running](docs/online-boutique-frontend-1.png)
+
+### Kubernetes Pods
+![kubectl pods](docs/img/Pods and Services.png)
+
+---
+## 📸 Screenshots
+
+### Frontend UI
+![App Running](docs/screenshots/frontend-ui.png)
+
+### Kubernetes Pods
+![kubectl pods](docs/screenshots/kubectl-get-pods.png)
 
 ---
 
