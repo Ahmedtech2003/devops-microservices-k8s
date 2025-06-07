@@ -112,7 +112,7 @@ minikube delete
 ![Frontend UI](docs/img/online-boutique-frontend-1.png)
 
 ### 🖥️ Kubernetes Pods & Services
-![kubectl pods](docs/img/Pods-and-Services)
+![kubectl pods](docs/img/Pods-and-Services.png)
 
 
 
