@@ -35,9 +35,13 @@ A complete Kubernetes-based microservices e-commerce demo deployed locally using
 Make sure the following tools are installed.
 
 1: Install Docker
+
 2: Install git
+
 3: Install Minikube
+
 4: Install Helm
+
 5: Install kubectl
 
 ---
