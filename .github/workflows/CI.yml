@@ -1,0 +1,30 @@
+name: DevOps Microservices CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v3
+
+    - name: 🧼 Lint Dockerfiles
+      uses: hadolint/hadolint-action@v3.1.0
+
+    - name: 🛠️ Setup Helm
+      uses: azure/setup-helm@v3
+      with:
+        version: v3.14.0
+
+    - name: ✅ Lint Helm Charts
+      run: helm lint ./helm-chart
+
+    - name: 🔍 Validate Kubernetes YAML
+      uses: ibiqlik/action-yamllint@v3
+      with:
+        file_or_dir: ./kubernetes-manifests
